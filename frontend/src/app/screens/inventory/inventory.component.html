@@ -1,0 +1,30 @@
+<div class="inventory-container">
+  <h1>Inventory Management</h1>
+  <div class="inventory-form">
+    <form (ngSubmit)="addInventory()">
+      <div>
+        <label for="itemName">Item Name:</label>
+        <input type="text" id="itemName" [(ngModel)]="newInventory.itemName" name="itemName" required>
+      </div>
+      <div>
+        <label for="itemQuantity">Quantity:</label>
+        <input type="number" id="itemQuantity" [(ngModel)]="newInventory.quantity" name="itemQuantity" required>
+      </div>
+      <div>
+        <label for="itemPrice">Price:</label>
+        <input type="number" id="itemPrice" [(ngModel)]="newInventory.price" name="itemPrice" required>
+      </div>
+      <button type="submit">Add Item</button>
+    </form>
+  </div>
+  
+  <div class="inventory-list">
+    <h2>Current Inventory</h2>
+    <ul>
+      <li *ngFor="let item of inventories">
+        {{ item.itemName }} - Quantity: {{ item.quantity }} - Price: {{ item.price | currency }}
+        <button (click)="deleteInventory(item.id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+.user-management {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.user-management h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.user-management table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-management th, .user-management td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.user-management th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.user-management .button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.user-management .button:hover {
+    background-color: #45a049;
+}

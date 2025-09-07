@@ -1,0 +1,16 @@
+<form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <h2>Login</h2>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <!-- Use formControlName to bind to the 'username' control in loginForm -->
+    <input type="text" id="username" formControlName="username" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <!-- Use formControlName to bind to the 'password' control in loginForm -->
+    <input type="password" id="password" formControlName="password" required>
+  </div>
+  <!-- Disable the button if the form is invalid -->
+  <button type="submit" [disabled]="loginForm.invalid">Login</button>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+</form>

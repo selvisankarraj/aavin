@@ -1,0 +1,40 @@
+<div class="billing-container">
+  <h2>Billing Management</h2>
+  <form (ngSubmit)="createBilling()" #billingForm="ngForm">
+    <div class="form-group">
+      <label for="item">Item</label>
+      <select id="item" [(ngModel)]="newBilling.item" name="item" required>
+        <option *ngFor="let item of inventoryItems" [value]="item.id">{{ item.name }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity" [(ngModel)]="newBilling.quantity" name="quantity" required>
+    </div>
+    <div class="form-group">
+      <label for="total">Total</label>
+      <input type="text" id="total" [(ngModel)]="newBilling.total" name="total" readonly>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <h3>Billing History</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bill of billings">
+        <td>{{ bill.item }}</td>
+        <td>{{ bill.quantity }}</td>
+        <td>{{ bill.total }}</td>
+        <td>{{ bill.date | date:'short' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

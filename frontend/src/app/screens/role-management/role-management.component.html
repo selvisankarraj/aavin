@@ -1,0 +1,24 @@
+<div class="role-management">
+  <h2>Role Management</h2>
+  <div class="role-list">
+    <h3>Roles</h3>
+    <ul>
+      <li *ngFor="let role of roles">
+        {{ role.name }}
+        <!-- The edit button is removed because the component lacks the editRole method -->
+        <button (click)="deleteRole(role.id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  <div class="role-form">
+    <!-- Removed conditional headings and button text as the component only supports 'Add Role' -->
+    <h3>Add Role</h3>
+    <!-- The form now directly calls the createRole() method -->
+    <form (ngSubmit)="createRole()">
+      <label for="roleName">Role Name:</label>
+      <!-- The ngModel is now correctly bound to the newRole object -->
+      <input type="text" id="roleName" [(ngModel)]="newRole.name" name="roleName" required>
+      <button type="submit">Create</button>
+    </form>
+  </div>
+</div>

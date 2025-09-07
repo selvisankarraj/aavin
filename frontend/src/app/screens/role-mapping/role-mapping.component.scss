@@ -1,0 +1,30 @@
+/* Styles for the Role Mapping component */
+
+.role-mapping-container {
+    padding: 20px;
+}
+
+.role-mapping-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.role-mapping-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.role-mapping-table th, .role-mapping-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.role-mapping-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.role-mapping-button {
+    margin-top: 20px;
+}

@@ -1,0 +1,47 @@
+<div class="user-management">
+  <h2>User Management</h2>
+  <div class="user-form">
+    <h3>Add User</h3>
+    <!-- Changed the ngSubmit method to call 'createUser()' from the component -->
+    <form (ngSubmit)="createUser()">
+      <label for="username">Username:</label>
+      <!-- Changed the ngModel binding from 'user.username' to 'newUser.username' -->
+      <input type="text" id="username" [(ngModel)]="newUser.username" name="username" required>
+
+      <label for="email">Email:</label>
+      <!-- Changed the ngModel binding from 'user.email' to 'newUser.email' -->
+      <input type="email" id="email" [(ngModel)]="newUser.email" name="email" required>
+
+      <!-- Removed the role select element as the component does not have a 'roles' array -->
+      
+      <button type="submit">Add User</button>
+    </form>
+  </div>
+
+  <div class="user-list">
+    <h3>User List</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- The user list loop is correct -->
+        <tr *ngFor="let user of users">
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <!-- Assuming the user model has a simple 'role' property, changed the binding from 'user.role.name' to 'user.role' to match the component's simple data structure. -->
+          <td>{{ user.role }}</td>
+          <td>
+            <!-- Removed the edit button as there is no corresponding 'editUser()' method in the component -->
+            <button (click)="deleteUser(user.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
