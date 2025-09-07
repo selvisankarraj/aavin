@@ -1,0 +1,8 @@
+D:\aavin\cafe-shop-app-1\webapi-backend\obj\Debug\net6.0\cafe-shop-api.csproj.AssemblyReference.cache
+D:\aavin\cafe-shop-app-1\webapi-backend\obj\Debug\net6.0\rpswa.dswa.cache.json
+D:\aavin\cafe-shop-app-1\webapi-backend\obj\Debug\net6.0\cafe-shop-api.GeneratedMSBuildEditorConfig.editorconfig
+D:\aavin\cafe-shop-app-1\webapi-backend\obj\Debug\net6.0\cafe-shop-api.AssemblyInfoInputs.cache
+D:\aavin\cafe-shop-app-1\webapi-backend\obj\Debug\net6.0\cafe-shop-api.AssemblyInfo.cs
+D:\aavin\cafe-shop-app-1\webapi-backend\obj\Debug\net6.0\cafe-shop-api.csproj.CoreCompileInputs.cache
+D:\aavin\cafe-shop-app-1\webapi-backend\obj\Debug\net6.0\cafe-shop-api.MvcApplicationPartsAssemblyInfo.cs
+D:\aavin\cafe-shop-app-1\webapi-backend\obj\Debug\net6.0\cafe-shop-api.MvcApplicationPartsAssemblyInfo.cache
